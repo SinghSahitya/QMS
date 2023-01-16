@@ -1,0 +1,9 @@
+{% extends 'quiz/base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>Home Page!!</h1>
+{% if user.is_authenticated %}
+<a href="{% url 'logout'%}">LOGOUT</a>
+{% endif %}
+{% endblock %}
+

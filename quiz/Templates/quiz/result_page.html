@@ -1,0 +1,18 @@
+{% extends 'quiz/base.html' %}
+{% block title %}Result{% endblock %}
+{% block content %}
+<h2 class="my-4" >Previously Attempted Quizzes</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Category</th>
+        <th>Attempted On</th>
+    </tr>
+    {% for row in res_category %}
+    <tr>
+        <td>{{row.category.title}}</td>
+        <td>{{row.attempt_time}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
